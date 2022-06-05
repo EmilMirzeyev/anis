@@ -11,6 +11,7 @@ import BannerInfo from '../components/Banner/BannerInfo'
 import Lands from '../components/Lands/Lands'
 import Markets from '../components/Markets/Markets'
 import Introduction from '../components/Introduction/Introduction'
+import Roadmaps from '../components/Roadmap/Roadmaps'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
         <Lands />
         <Markets />
         <Introduction />
+        <Roadmaps />
       </div>
     </>
   )

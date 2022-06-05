@@ -35,8 +35,8 @@
     .introduction_left_shape, .introduction_right_shape {
         position: absolute;
         top: 50%;
-        left: 25px;
-        width: 50px;
+        left: 0px;
+        width: 70px;
         height: 100%;
         border-radius: 50%;
         filter: blur(60px);
@@ -46,7 +46,7 @@
 
     .introduction_right_shape {
         left: auto;
-        right: 25px;
+        right: 0;
         background-color: #E94367;
     }
 }
