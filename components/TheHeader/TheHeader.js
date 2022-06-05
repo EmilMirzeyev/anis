@@ -1,22 +1,23 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import t from "../Translation";
 import s from "../../styles/TheHeader.module.css";
 import Button from "../Atom/Button";
 import MobileDropdown from "./MobileDropdown";
 
 const TheHeader = () => {
+  const [navActive, setNavActive] = useState(false)
   return (
     <div className={s.header}>
       <div className={[s.header_container, "wrapper"].join(" ")}>
         <div className={s.logo}>
           <Image src={"/images/anis_coin_logo.png"} layout="fill" />
         </div>
-        <div className={s.hamburger_menu}>
-          <div></div>
+        <div className={[s.hamburger_menu, navActive ? s.active : ''].join(" ")} onClick={() => setNavActive(!navActive)} >
+          <div className={s.menu_bar_top}></div>
           <div className={s.menu_bar_middle}></div>
-          <div></div>
+          <div className={s.menu_bar_bottom}></div>
         </div>
         <ul className={s.navbar}>
           <Link href={"/"}>
@@ -64,7 +65,7 @@ const TheHeader = () => {
           </Link>
         </ul>
       </div>
-      <MobileDropdown />
+      <MobileDropdown active={navActive} />
     </div>
   );
 };

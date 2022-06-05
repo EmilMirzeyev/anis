@@ -1,0 +1,184 @@
+.banner {
+  margin-bottom: 105px;
+}
+
+.banner_upper {
+  width: 100%;
+  background: var(--main-gradient);
+  border-radius: 20px;
+  padding: 18px 0;
+}
+
+.banner_content>p {
+  margin: 30px 0;
+  font-size: 20px;
+}
+
+.banner_content>button {
+  background: var(--button-gradient);
+  border-radius: 16px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 215px;
+  height: 42px;
+  font-size: 18px;
+}
+
+.banner_bottom {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  background: var(--main-gradient);
+  height: 80px;
+  padding: 22px;
+  border-radius: 10px;
+}
+
+.banner_bottom>span {
+  min-width: 24px;
+}
+
+/**************************************************/
+/***************BANNER INFO SECTION****************/
+/**************************************************/
+
+.banner_info_section {
+  position: relative;
+  margin-bottom: 105px;
+}
+
+.banner_info_land_images {
+  max-width: 510px;
+  margin: 0 auto 52px auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 0;
+}
+
+.banner_info_land_image {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  background-color: var(--secondary-bg-color);
+  margin: 12px auto;
+  border-radius: 10px;
+  box-shadow: var(--border-gradient);
+  overflow: hidden;
+}
+
+.banner_info_land_image:nth-child(2n) {
+  transform: translateY(24px);
+}
+
+.banner_info_content {
+  position: relative;
+}
+
+.banner_info_content>p {
+  margin: 32px 0;
+}
+
+.banner_info_links {
+  max-width: 510px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.banner_info_marketplace_btn,
+.banner_info_minimap_btn {
+  width: 50%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+}
+
+.banner_info_marketplace_btn {
+  background: var(--button-gradient);
+}
+
+.banner_info_minimap_btn {
+  border: 1px solid var(--text-color);
+}
+
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 991px) {
+  .banner {
+    margin: 0 25px 150px 25px;
+  }
+
+  .banner_wrapper {
+    display: flex;
+  }
+
+  .banner_content {
+    width: 50%;
+  }
+
+  .banner_image {
+    width: 50%;
+  }
+
+  .banner_info_section {
+    margin-bottom: 150px;
+  }
+
+  .banner_info_shape {
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: red;
+    background: linear-gradient(90deg, rgba(52, 25, 254, 0.9) -120%, rgba(167, 191, 232, 0) 150%);
+    border: 1px solid #4a3affc2;
+    border-radius: 0px 50px 50px 0px;
+  }
+
+  .banner_info_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .banner_info_land_images {
+    max-width: unset;
+  }
+
+  .banner_info_land_image {
+    width: 205px;
+  }
+
+  .banner_info_marketplace_btn,
+  .banner_info_minimap_btn {
+    width: 50%;
+    height: 52px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .banner_info_land_image {
+    width: 260px;
+  }
+ 
+  .banner_info_shape {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 1536px) {
+  .banner_info_land_image {
+    width: 285px;
+  }
+}

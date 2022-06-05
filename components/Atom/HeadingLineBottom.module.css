@@ -1,0 +1,18 @@
+.heading_with_line_bottom {
+    position: relative;
+    text-align: center;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.heading_with_line_bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 2px;
+    border-radius: 99px;
+    background-color: var(--text-color);
+}

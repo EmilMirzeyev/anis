@@ -1,0 +1,56 @@
+.introduction {
+    margin-bottom: 105px;
+    position: relative;
+}
+
+.introduction_content>h3 {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 991px) {
+    .introduction {
+        margin-bottom: 150px;
+    }
+
+    .introduction_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .banner_image {
+        width: 50%;
+    }
+
+    .introduction_content {
+        width: 50%;
+    }
+
+    .introduction_left_shape, .introduction_right_shape {
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        width: 50px;
+        height: 100%;
+        border-radius: 50%;
+        filter: blur(60px);
+        background-color: #0082D1;
+        transform: translateY(-50%);
+    }
+
+    .introduction_right_shape {
+        left: auto;
+        right: 25px;
+        background-color: #E94367;
+    }
+}
+
+@media only screen and (min-width: 1280px) {}
+
+@media only screen and (min-width: 1536px) {}

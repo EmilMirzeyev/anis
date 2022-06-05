@@ -1,6 +1,13 @@
 :root {
   --bg-color: #000000;
-  --text-color: #fffefc;
+  --secondary-bg-color: #060F39;
+  --text-color: #fcfcfc;
+  --main-gradient: linear-gradient(63.2deg, #131C85 30%, #8278D9 100%);
+  --button-gradient: linear-gradient(104.48deg, #3419FE 3%, #58A0FF 100%);
+  --border-gradient: 0 1px 0 0 rgba(111, 0, 255, 0.25), 0 -1px 0 0 rgba(104, 12, 165, 0.25),
+    1px 0 0 0 rgba(28, 64, 161, 0.25), -1px 0 0 0 rgba(145, 48, 128, 0.25),
+    1px -1px 0 0 rgb(203 76 205 / 50%), -1px 1px 0 0 rgba(92, 136, 206, 0.5),
+    1px 1px 0 0 rgb(105 154 235 / 75%), -1px -1px 0 0 rgb(240 47 194 / 75%);
 }
 
 @font-face {
@@ -23,7 +30,7 @@ body {
   font-smooth: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
+  font-size: 14px;
   width: 100%;
   overflow-x: hidden;
   letter-spacing: 0.02em;
@@ -31,6 +38,11 @@ body {
   text-shadow: 1px 1px 1px rgb(25 27 33 / 35%);
   background-color: var(--bg-color);
   color: var(--text-color);
+}
+
+main {
+  position: relative;
+  z-index: 1;
 }
 
 a,
@@ -59,14 +71,66 @@ input {
 }
 
 button {
+  color: var(--text-color);
   background-color: transparent;
   cursor: pointer;
 }
 
+h1 {
+  font-size: 40px;
+  line-height: 45px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
 .wrapper {
   width: 100% !important;
-  padding: 0 12px;
+  padding: 0 20px;
   margin: 0 auto;
+}
+
+.layout_gradient {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(63.2deg, #050B24 -8.11%, #0C163D 103.59%);
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  height: 13px;
+  background: linear-gradient(85deg, #050b24 1%, #0C163D 98%);
+  box-shadow: inset -2px -4px 8px #050b24, inset 0px 4px 7px #151616;
+  border-radius: 0.9375rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  margin: 2px 0 1px 2px;
+  height: 10px;
+  background: linear-gradient(175.7deg, #131d859f 0%, #8278d9b6 100%);
+  box-shadow: -1px 2px 2px rgb(15 18 22 / 60%), inset 0px -2px 1px #0e1216;
+  border-radius: 0.9375rem;
 }
 
 @media only screen and (min-width: 576px) {
@@ -74,23 +138,60 @@ button {
     width: 550px !important;
   }
 }
+
 @media only screen and (min-width: 768px) {
   .wrapper {
     width: 750px !important;
   }
 }
+
 @media only screen and (min-width: 991px) {
+  html,
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
   .wrapper {
     width: 980px !important;
   }
+
+  .layout_gradient {
+    min-height: 1080px;
+    background: linear-gradient(63.2deg, #000000 -8.11%, #0C163D 103.59%);
+  }
 }
+
 @media only screen and (min-width: 1280px) {
   .wrapper {
     width: 1200px !important;
   }
+
+  h1 {
+    font-size: 60px;
+    line-height: 72px;
+  }
 }
+
 @media only screen and (min-width: 1536px) {
   .wrapper {
     width: 1320px !important;
+  }
+
+  h1 {
+    font-size: 64px;
+    line-height: 82px;
   }
 }

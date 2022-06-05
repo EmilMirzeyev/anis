@@ -1,0 +1,97 @@
+.lands {
+    margin-bottom: 105px;
+}
+
+.lands_wrapper {
+    display: flex;
+    gap: 18px;
+}
+
+.land {
+    width: calc(50% - 9px);
+    padding: 12px;
+    background-color: var(--secondary-bg-color);
+    box-shadow: var(--border-gradient);
+    border-radius: 10px;
+}
+
+.land:nth-child(3) {
+    display: none;
+}
+
+.land_image {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    box-shadow: var(--border-gradient);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.land p {
+    font-weight: 700;
+}
+
+.land_name {
+    margin: 12px 0 8px 0;
+}
+
+.land_section {
+    margin-bottom: 8px;
+}
+
+.land_coordinates {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.land_buy_btn {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    margin-top: 8px;
+    border-radius: 999px;
+    background: var(--button-gradient);
+}
+
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 991px) {
+    .lands {
+        margin-bottom: 150px;
+    }
+
+    .land {
+        width: calc(33.33% - 6px);
+    }
+
+    .land:nth-child(3) {
+        display: unset;
+    }
+
+    .land_buy_btn {
+        height: 52px;
+    }
+
+    .land_section {
+        float: left;
+    }
+
+    .land_coordinates {
+        transform: translateY(4px);
+    }
+
+    .land_coordinates>span {
+        margin-left: auto !important;
+    }
+}
+
+@media only screen and (min-width: 1280px) {}
+
+@media only screen and (min-width: 1536px) {}

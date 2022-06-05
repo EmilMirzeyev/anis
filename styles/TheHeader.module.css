@@ -1,14 +1,16 @@
 .header {
+  /* position: fixed;
+  top: 0; */
   width: 100%;
-  height: 110px;
-  padding: 25px;
-  /* background-color: red; */
+  min-height: 110px;
 }
 
 .header_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 25px !important;
+  padding-bottom: 25px !important;
 }
 
 .logo {
@@ -17,12 +19,26 @@
   height: 50px;
 }
 
-.hamburger_menu > div {
+.hamburger_menu>div {
   width: 26px;
   height: 2px;
   border-radius: 99px;
   background-color: #fff;
+  transition: all 0.3s;
   cursor: pointer;
+}
+
+.hamburger_menu.active .menu_bar_top {
+  transform: translateY(8px) rotate(-45deg);
+}
+
+.hamburger_menu.active .menu_bar_middle {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.hamburger_menu.active .menu_bar_bottom {
+  transform: translateY(-8px) rotate(45deg);
 }
 
 .menu_bar_middle {
@@ -34,18 +50,46 @@
 }
 
 .social_networks {
-    display: flex;
-    align-items: center;
+  display: none;
 }
 
-.social_networks li {
-    position: relative;
-    margin: 0 8px;
-    width: 24px;
-    height: 24px;
+.mobile_dropdown {
+  background-color: var(--secondary-bg-color);
+  border-radius: 15px;
+  transition: height 0.3s;
+  overflow: hidden;
+  margin-bottom: 16px;
 }
 
-.social_networks button {
+.mobile_dropdown_wrapper {
+  padding: 16px;
+}
+
+.mobile_navbar {
+  text-align: center;
+}
+
+.mobile_navbar li {
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.mobile_social_networks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.mobile_social_networks li {
+  position: relative;
+  margin: 0 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.mobile_dropdown button {
+  margin: auto;
   height: 36px;
   padding: 0 16px;
   display: flex;
@@ -55,58 +99,61 @@
   color: var(--text-color);
 }
 
-.mobile_dropdown {
-  background-color: #060F39;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-}
-
-/* .mobile_social_networks {
-  text-align: center;
-} */
-
-.mobile_social_networks li {
-  position: relative;
-  margin: 0 8px;
-  width: 24px;
-  height: 24px;
-}
-
-.mobile_social_networks button {
-height: 36px;
-padding: 0 16px;
-display: flex;
-align-items: center;
-border: 1px solid #0055FF;
-border-radius: 99px;
-color: var(--text-color);
-}
-
 @media only screen and (min-width: 576px) {
   /*sm*/
 }
+
 @media only screen and (min-width: 768px) {
   /*md*/
 }
+
 @media only screen and (min-width: 991px) {
+
   /*lg*/
   .navbar {
     display: flex;
   }
-  
+
+  .social_networks {
+    display: flex;
+    align-items: center;
+  }
+
+  .social_networks li {
+    position: relative;
+    margin: 0 8px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .social_networks button {
+    height: 36px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #0055FF;
+    border-radius: 99px;
+    color: var(--text-color);
+  }
+
   .navbar li {
     margin: 0 12px;
     text-transform: uppercase;
   }
 
   .hamburger_menu {
-      display: none;
+    display: none;
+  }
+
+  .mobile_dropdown {
+    display: none;
   }
 }
+
 @media only screen and (min-width: 1280px) {
   /*xl*/
 }
+
 @media only screen and (min-width: 1536px) {
   /*2xl*/
 }

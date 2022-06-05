@@ -9,7 +9,7 @@ export const useMediaQuery = (query) => {
   }, []);
 
   useEffect(() => {
-    const media = window.matchMedia(query);
+    const media = window.matchMedia(`(${query})`);
     media.addEventListener("change", updateTarget);
 
     if (media.matches) setTargetReached(true);

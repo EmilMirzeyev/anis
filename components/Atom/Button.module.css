@@ -7,10 +7,10 @@
   padding: 12px;
   font-size: 14px;
   color: var(--text-color);
-  box-shadow: 0 1px 0 0 rgba(111, 0, 255, 0.25), 0 -1px 0 0 rgba(104, 12, 165, 0.25),
-    1px 0 0 0 rgba(28, 64, 161, 0.25), -1px 0 0 0 rgba(145, 48, 128, 0.25),
-    1px -1px 0 0 rgb(203 76 205 / 50%), -1px 1px 0 0 rgba(92, 136, 206, 0.5),
-    1px 1px 0 0 rgb(105 154 235 / 75%), -1px -1px 0 0 rgb(240 47 194 / 75%);
+}
+
+.atomic_button.border_gradient {
+  box-shadow: var(--border-gradient);
 }
 
 /* .atomic_button::before {
