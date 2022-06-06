@@ -1,17 +1,17 @@
-import React from 'react'
-import s from "../../styles/Roadmap.module.css"
+import React from "react";
+import s from "../../styles/Roadmap.module.css";
 
-const Roadmap = ({title, lists}) => {
+const Roadmap = ({ title, lists }) => {
   return (
     <div className={s.roadmap}>
-        <h3>{title}</h3>
-        <ul>
-            {lists.map(list => (
-                <li>- {list}</li>
-            ))}
-        </ul>
+      <h3>{title}</h3>
+      <ul>
+        {lists.map((list, i) => (
+          <li key={i}>- {list}</li>
+        ))}
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Roadmap
+export default Roadmap;

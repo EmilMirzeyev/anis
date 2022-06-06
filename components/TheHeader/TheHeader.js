@@ -7,14 +7,21 @@ import Button from "../Atom/Button";
 import MobileDropdown from "./MobileDropdown";
 
 const TheHeader = () => {
-  const [navActive, setNavActive] = useState(false)
+  const [navActive, setNavActive] = useState(false);
   return (
     <div className={s.header}>
       <div className={[s.header_container, "wrapper"].join(" ")}>
-        <div className={s.logo}>
-          <Image src={"/images/anis_coin_logo.png"} layout="fill" />
-        </div>
-        <div className={[s.hamburger_menu, navActive ? s.active : ''].join(" ")} onClick={() => setNavActive(!navActive)} >
+        <Link href={"/"}>
+          <a>
+            <div className={s.logo}>
+              <Image src={"/images/anis_coin_logo.png"} layout="fill" />
+            </div>
+          </a>
+        </Link>
+        <div
+          className={[s.hamburger_menu, navActive ? s.active : ""].join(" ")}
+          onClick={() => setNavActive(!navActive)}
+        >
           <div className={s.menu_bar_top}></div>
           <div className={s.menu_bar_middle}></div>
           <div className={s.menu_bar_bottom}></div>
@@ -37,28 +44,44 @@ const TheHeader = () => {
           </Link>
         </ul>
         <ul className={s.social_networks}>
-            <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
-                <li>
-                    <Image src={"/vectors/instagram.svg"} layout="fill" />
-                </li>
-            </a>
-            <a href="http://twitter.com" target="_blank" rel="noopener noreferrer">
-                <li>
-                    <Image src={"/vectors/twitter.svg"} layout="fill" />
-                </li>
-            </a>
-            <a href="http://youtube.com" target="_blank" rel="noopener noreferrer">
-                <li>
-                    <Image src={"/vectors/youtube.svg"} layout="fill" />
-                </li>
-            </a>
-            <a href="http://telegram.com" target="_blank" rel="noopener noreferrer">
-                <li>
-                    <Image src={"/vectors/telegram.svg"} layout="fill" />
-                </li>
-            </a>
-            
-            <Link href={"/whitepaper"}>
+          <a
+            href="http://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li>
+              <Image src={"/vectors/instagram.svg"} layout="fill" />
+            </li>
+          </a>
+          <a
+            href="http://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li>
+              <Image src={"/vectors/twitter.svg"} layout="fill" />
+            </li>
+          </a>
+          <a
+            href="http://youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li>
+              <Image src={"/vectors/youtube.svg"} layout="fill" />
+            </li>
+          </a>
+          <a
+            href="http://telegram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <li>
+              <Image src={"/vectors/telegram.svg"} layout="fill" />
+            </li>
+          </a>
+
+          <Link href={"/whitepaper"}>
             <a>
               <button>{t("whitepaper")}</button>
             </a>

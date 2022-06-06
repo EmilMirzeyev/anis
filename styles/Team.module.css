@@ -1,0 +1,71 @@
+.team {
+  position: relative;
+  padding-bottom: 230px;
+  overflow: hidden;
+}
+
+.team > span {
+    transform: translateY(40%);
+}
+
+.neon_shape {
+    position: absolute;
+    bottom: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 120px;
+    background-color: #4A3AFF;
+    border-radius: 50%;
+    filter: blur(70px);
+}
+
+.team_cards_wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 32px;
+  z-index: 1;
+}
+
+.team_card {
+  width: calc(20% - 16px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  min-height: 170px;
+  box-shadow: var(--border-gradient);
+  background: linear-gradient(
+    64.29deg,
+    #141a25 ,
+    #141a2500
+  );
+  border-radius: 15px;
+}
+
+.team_card > small {
+  background-color: #8278d9;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 999px;
+}
+
+@media only screen and (min-width: 576px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 991px) {
+}
+
+@media only screen and (min-width: 1280px) {
+}
+
+@media only screen and (min-width: 1536px) {
+}

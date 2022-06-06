@@ -103,6 +103,34 @@ h3 {
   background: linear-gradient(63.2deg, #050B24 -8.11%, #0C163D 103.59%);
 }
 
+.left_lines_first {
+  position: absolute;
+  left: 0;
+  top: 150px;
+  width: 30%;
+}
+
+.left_lines_second {
+  position: absolute;
+  left: 0;
+  top: 2050px;
+  width: 30%;
+}
+
+.right_lines_first {
+  position: absolute;
+  right: 0;
+  top: 450px;
+  width: 30%;
+}
+
+.right_lines_second {
+  position: absolute;
+  right: 0;
+  top: 1700px;
+  width: 30%;
+}
+
 .truncate {
   white-space: nowrap;
   overflow: hidden;

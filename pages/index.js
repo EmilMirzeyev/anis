@@ -12,6 +12,8 @@ import Lands from '../components/Lands/Lands'
 import Markets from '../components/Markets/Markets'
 import Introduction from '../components/Introduction/Introduction'
 import Roadmaps from '../components/Roadmap/Roadmaps'
+import ComingSoon from '../components/ComingSoon/ComingSoon'
+import Team from '../components/Team/Team'
 
 const Home = () => {
   return (
@@ -24,6 +26,8 @@ const Home = () => {
         <Markets />
         <Introduction />
         <Roadmaps />
+        <ComingSoon />
+        <Team />
       </div>
     </>
   )

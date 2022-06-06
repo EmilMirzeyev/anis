@@ -7,7 +7,7 @@ import { useMediaQuery } from '../MediaQuery'
 
 const Banner = () => {
     const copyToClipboard = () => {
-        navigator.clipboard.writeText("lalalala");
+        navigator.clipboard.writeText("0xc7a66f9362c467e0e86459a66f93");
         ToastStore.infoToast("Contract copied to clipboard")
     }
 
