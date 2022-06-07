@@ -43,6 +43,10 @@ body {
 main {
   position: relative;
   z-index: 1;
+  max-width: 1800px;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 a,
@@ -113,7 +117,7 @@ h3 {
 .left_lines_second {
   position: absolute;
   left: 0;
-  top: 2050px;
+  top: 2550px;
   width: 30%;
 }
 
@@ -127,7 +131,7 @@ h3 {
 .right_lines_second {
   position: absolute;
   right: 0;
-  top: 1700px;
+  top: 2200px;
   width: 30%;
 }
 

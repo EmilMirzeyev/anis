@@ -1,6 +1,8 @@
 .footer {
   width: 100%;
   background-color: var(--bg-color);
+  position: relative;
+  z-index: 1;
 }
 
 .footer_slogan {
@@ -56,18 +58,18 @@
 }
 
 .bottom_footer {
-    border-top: 2px solid #0055FF;
-    padding-top: 32px;
+  border-top: 2px solid #0055ff;
+  padding-top: 32px;
 }
 
 .bottom_footer_wrapper {
-    padding: 0 16px;
-    font-weight: 600;
+  padding: 0 16px;
+  font-weight: 600;
 }
 
 .bottom_footer_wrapper > p:nth-child(2) {
-    padding: 32px 0;
-    text-align: center;
+  padding: 32px 0;
+  text-align: center;
 }
 
 @media only screen and (min-width: 576px) {
@@ -137,11 +139,11 @@
     justify-content: space-between;
     font-weight: normal;
     font-size: 16px;
-}
+  }
 
-.bottom_footer_wrapper > p:nth-child(2) {
+  .bottom_footer_wrapper > p:nth-child(2) {
     padding: unset;
-}
+  }
 }
 
 @media only screen and (min-width: 1280px) {

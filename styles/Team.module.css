@@ -5,19 +5,19 @@
 }
 
 .team > span {
-    transform: translateY(40%);
+  transform: translateY(40%);
 }
 
 .neon_shape {
-    position: absolute;
-    bottom: -90px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 120px;
-    background-color: #4A3AFF;
-    border-radius: 50%;
-    filter: blur(70px);
+  position: absolute;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 120px;
+  background-color: #4a3aff;
+  border-radius: 50%;
+  filter: blur(70px);
 }
 
 .team_cards_wrapper {
@@ -40,11 +40,7 @@
   padding: 12px;
   min-height: 170px;
   box-shadow: var(--border-gradient);
-  background: linear-gradient(
-    64.29deg,
-    #141a25 ,
-    #141a2500
-  );
+  background: linear-gradient(64.29deg, #141a25, #141a2500);
   border-radius: 15px;
 }
 

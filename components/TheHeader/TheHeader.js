@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import t from "../Translation";
 import s from "../../styles/TheHeader.module.css";
 import Button from "../Atom/Button";
 import MobileDropdown from "./MobileDropdown";
+import useEventListener from "../CustomHooks/useEventListener";
 
 const TheHeader = () => {
   const [navActive, setNavActive] = useState(false);
+  const [coords, setCoords] = useState(false);
+
+  const scrollHandler = useCallback(
+    (e) => {
+      setTimeout(() => {
+        if (window.scrollY >= 10) {
+          return setCoords(true);
+        }
+        setCoords(false);
+      });
+    },
+    [setCoords]
+  );
+
+  useEventListener(process.browser && window, "scroll", scrollHandler);
+
   return (
-    <div className={s.header}>
+    <div className={[s.header, coords ? s.active : ""].join(" ")}>
       <div className={[s.header_container, "wrapper"].join(" ")}>
         <Link href={"/"}>
           <a>

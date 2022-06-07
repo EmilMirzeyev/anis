@@ -1,8 +1,14 @@
 .header {
-  /* position: fixed;
-  top: 0; */
+  position: fixed;
+  top: 0;
   width: 100%;
   min-height: 110px;
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.header.active {
+  background: linear-gradient(63.2deg, #050B24 -8.11%, #0C163D 103.59%);
 }
 
 .header_container {
