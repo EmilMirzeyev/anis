@@ -14,6 +14,7 @@ const Markets = () => {
         <Market name={"Villa BoobGoop"} imageUrl={"/images/market.jpeg"} count={5} />
         <Market name={"Villa BoobGoop"} imageUrl={"/images/market.jpeg"} count={7} />
         <Market name={"Villa BoobGoop"} imageUrl={"/images/market.jpeg"} count={2} />
+        <Market name={"Villa BoobGoop"} imageUrl={"/images/market.jpeg"} count={16} />
       </div>
       <Link href={"/marketplace"}>
         <a className={s.marketplace_btn}>

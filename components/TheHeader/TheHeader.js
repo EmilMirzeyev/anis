@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import t from "../Translation";
@@ -22,6 +22,11 @@ const TheHeader = () => {
     },
     [setCoords]
   );
+
+  useEffect(() => {
+    scrollHandler()
+  }, [])
+
 
   useEventListener(process.browser && window, "scroll", scrollHandler);
 

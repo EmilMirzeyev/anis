@@ -9,6 +9,10 @@
   padding: 18px 0;
 }
 
+.banner_content {
+  position: relative;
+}
+
 .banner_content>p {
   margin: 30px 0;
   font-size: 20px;
@@ -23,6 +27,10 @@
   width: 215px;
   height: 42px;
   font-size: 18px;
+}
+
+.banner_image {
+  display: none;
 }
 
 .banner_bottom {
@@ -114,7 +122,19 @@
 
 @media only screen and (min-width: 991px) {
   .banner {
+    position: relative;
     margin: 0 25px 150px 25px;
+  }
+
+  .banner_upper {
+    background: transparent;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner_upper>span>img {
+    object-fit: cover;
   }
 
   .banner_wrapper {
@@ -126,7 +146,19 @@
   }
 
   .banner_image {
+    display: block;
+    position: relative;
     width: 50%;
+    padding-top: 50%;
+  }
+
+  .banner_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    justify-content: space-evenly;
+    background: transparent;
   }
 
   .banner_info_section {
@@ -171,7 +203,7 @@
   .banner_info_land_image {
     width: 260px;
   }
- 
+
   .banner_info_shape {
     height: 500px;
   }

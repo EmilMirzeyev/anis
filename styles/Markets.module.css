@@ -15,7 +15,8 @@
     border-radius: 10px;
 }
 
-.market:nth-child(3) {
+.market:nth-child(3),
+.market:nth-child(4) {
     display: none;
 }
 
@@ -87,18 +88,22 @@
 
 @media only screen and (min-width: 576px) {}
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    .market:nth-child(3) {
+        display: unset;
+    }
+}
 
 @media only screen and (min-width: 991px) {
     .markets {
         margin-bottom: 150px;
     }
-    
+
     .market {
         width: calc(33.33% - 6px);
     }
 
-    .market:nth-child(3) {
+    .market:nth-child(4) {
         display: unset;
     }
 

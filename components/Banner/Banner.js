@@ -14,22 +14,28 @@ const Banner = () => {
   return (
     <div className={s.banner}>
       <div className={s.banner_upper}>
+      <Image
+          src={"/vectors/banner_shape.svg"}
+          layout="fill"
+          priority={true}
+        />
         <div className={[s.banner_wrapper, "wrapper"].join(" ")}>
           <div className={s.banner_content}>
             <h1>{t("banner_title")}</h1>
             <p>{t("banner_description")}</p>
             <button>{t("mini_map")}</button>
           </div>
-          {useMediaQuery("min-width: 991px") && (
+          {/* {useMediaQuery("min-width: 991px") && ( */}
             <div className={s.banner_image}>
               <Image
                 src={"/images/banner.png"}
-                layout="responsive"
-                width={1}
-                height={1}
+                layout="fill"
+                // width={1}
+                // height={1}
+                priority={true}
               />
             </div>
-          )}
+          {/* )} */}
         </div>
       </div>
       <div className={s.banner_bottom}>
